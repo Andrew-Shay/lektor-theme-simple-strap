@@ -1,0 +1,19 @@
+_model: page_two_column_html
+---
+title: Two Column Html
+---
+body:
+
+<p>This is a two column page. <br>
+This is the body. <br>
+The left side. <br>
+This is formatted with html. </p>
+---
+right:
+
+<h1>Right Side</h1>
+
+<p>This is the right side.<br>
+This is formatted with html.</p>
+---
+_template: page_two_column.html

@@ -1,0 +1,19 @@
+_model: page_two_column_markdown
+---
+title: Two Column Markdown
+---
+_template: page_two_column.html
+---
+body:
+
+This is a two column page.  
+This is the body.  
+The left side.  
+This is formatted with markdown.
+---
+right:
+
+# Right Side
+
+This is the right side.  
+This is formatted with markdown.

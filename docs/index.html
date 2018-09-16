@@ -40,9 +40,11 @@
         
           <a class="col-md-auto p-2" href="./blog/">Blog</a>
         
-          <a class="col-md-auto p-2" href="./single-column/">Single Column Page</a>
+          <a class="col-md-auto p-2" href="./single-column/">One Column MD</a>
         
-          <a class="col-md-auto p-2" href="./two-column-markdown/">Two Column Markdown</a>
+          <a class="col-md-auto p-2" href="./single-column-html/">One Column HTML</a>
+        
+          <a class="col-md-auto p-2" href="./two-column-markdown/">Two Column MD</a>
         
           <a class="col-md-auto p-2" href="./two-column-html/">Two Column HTML</a>
         
@@ -66,13 +68,23 @@ It's a clean, simple, black and white theme.<br>
 It's built using <a href="https://getbootstrap.com/">Bootstrap 4</a>.<br>
 The base theme is a modified version of <a href="https://bootswatch.com/lux/">Lux</a> by <a href="https://bootswatch.com/">Bootswatch</a>.<br>
 Lux was modified with <a href="https://bootstrap.build/">bootstrap.build</a>.</p>
-<p>This theme includes multiple templates.</p>
+<h2>Templates</h2>
 <ul>
+<li><code>templates/blog.html</code> - Blog listing.</li>
+<li><code>templates/blog-post.html</code> - A single page that contains one blog post.</li>
 <li><code>templates/layout.html</code> - The base template for every page. Includes header and footer.</li>
 <li><code>templates/page.html</code> - The template for this page. A two column page. The right column will be the same for every page with this template.</li>
-<li><code>templates/page_one_column.html</code> - A single column page using markdown.</li>
-<li><code>templates/page_two_column_markdown.html</code> - A two column page using markdown.</li>
-<li><code>templates/page_two_column_html.html</code> - A two column page using HTML.</li>
+<li><code>templates/page_one_column.html</code> - A single column page.</li>
+<li><code>templates/page_two_column.html</code> - A two column page.</li>
+<li><code>templates/macros/blog.html</code> - Renders a single blog post. </li>
+<li><code>templates/macros/pagination.html</code> - Renders the Previous and Next buttons for blog listing.</li>
+</ul>
+<h2>Models</h2>
+<ul>
+<li><code>models/page.ini</code> - Body content formatted in markdown.  Used for templates <code>page.html</code> and <code>page_one_column.html</code>.</li>
+<li><code>models/page_html.ini</code> - Body content formatted in HTML.  Used for template <code>page_one_column.html</code>.</li>
+<li><code>models/page_two_column.html.ini</code> - Body content and Right content formatted in HTML. Used for template <code>page_two_column.html</code>.</li>
+<li><code>models/page_two_column_markdown.ini</code> - Body content and Right content formatted in markdown. Used for template <code>page_two_column.html</code>.</li>
 </ul>
 
 </div>

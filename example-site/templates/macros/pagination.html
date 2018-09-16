@@ -1,0 +1,15 @@
+{% macro render_pagination(pagination) %}
+  <nav class="site-pagination">
+    {% if pagination.has_prev %}
+      <a class="btn btn-outline-primary" href="{{ pagination.prev|url }}">Previous</a>
+    {% else %}
+      <a class="btn btn-secondary disabled" href="#">Previous</a>
+    {% endif %}
+    <div class="btn btn-secondary disabled">{{ pagination.page }}</div>
+    {% if pagination.has_next %}
+      <a class="btn btn-outline-primary" href="{{ pagination.next|url }}">Next</a>
+    {% else %}
+      <a class="btn btn-secondary disabled" href="#">Next</a>
+    {% endif %}
+  </nav>
+{% endmacro %}

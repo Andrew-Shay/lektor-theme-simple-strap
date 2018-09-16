@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="My Blog">
   <meta name="author" content="Andrew Shay">
-  <link rel="icon" href="../static/img/favicon.ico">
+  <link rel="icon" href="{{ '/static/img/favicon.ico'|url }}">
 
   <title>My Blog</title>
 
-  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ '/static/css/bootstrap.min.css'|url }}">
 
   <!-- Custom CSS -->
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link rel="stylesheet" href="../static/css/custom.css">
+  <link rel="stylesheet" href="{{ '/static/css/custom.css'|url }}">
 </head>
 
 <body>
@@ -35,19 +35,9 @@
     <!-- NAVIGATION -->
     <div class="container nav-bar">
       <div class="row nav">
-        
-          <a class="col-md-auto p-2" href="../">Home</a>
-        
-          <a class="col-md-auto p-2" href="../blog/">Blog</a>
-        
-          <a class="col-md-auto p-2" href="../single-column/">One Column MD</a>
-        
-          <a class="col-md-auto p-2" href="../single-column-html/">One Column HTML</a>
-        
-          <a class="col-md-auto p-2" href="../two-column-markdown/">Two Column MD</a>
-        
-          <a class="col-md-auto p-2" href="../two-column-html/">Two Column HTML</a>
-        
+        {% for href, title in [ ['/', 'Home'], ['/blog', 'Blog'], ['/single-column', 'One Column MD'], ['/single-column-html', 'One Column HTML'], ['/two-column-markdown', 'Two Column MD'], ['/two-column-html', 'Two Column HTML'] ] %}
+          <a class="col-md-auto p-2" href="{{ href|url }}">{{ title }}</a>
+        {% endfor %}
       </div>
     </div>
     <!-- END NAVIGATION -->
@@ -57,30 +47,7 @@
       <!-- MAIN BODY -->
       <div class="col">
 
-        
-<!-- BLOG POST -->
-<div>
-  <h1>Two Column Markdown</h1>
-  <p>This is a two column page.<br>
-This is the body.<br>
-The left side.<br>
-This is formatted with markdown.</p>
-
-</div>
-<!-- END BLOG POST -->
-
-</div>
-<!-- END MAIN BODY -->
-
-<!-- SIDEBAR -->
-<aside class="col-md-4">
-  <h1>Right Side</h1>
-<p>This is the right side.<br>
-This is formatted with markdown.</p>
-
-</aside>
-<!-- END SIDEBAR -->
-
+        {% block body %}{% endblock %}
 
     </div>
   </main>
