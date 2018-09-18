@@ -13,7 +13,7 @@ See `_variables.scss` for the CSS source.
 * `templates/blog.html` - Blog listing.
 * `templates/blog-post.html` - A single page that contains one blog post.
 * `templates/layout.html` - The base template for every page. Includes header and footer.
-* `templates/page.html` - The template for this page. A two column page. The right column will be the same for every page with this template.
+* `templates/page.html` - The template for the homepage. A two column page. The right column will be the same for every page with this template.
 * `templates/page_one_column.html` - A single column page.
 * `templates/page_two_column.html` - A two column page.
 * `templates/macros/blog.html` - Renders a single blog post. 
