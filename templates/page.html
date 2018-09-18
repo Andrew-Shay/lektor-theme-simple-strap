@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+<!-- BLOG POST -->
+<div class="blog-post">
+  <h1 class="blog-post-title">{{ this.title }}</h1>
+  {{ this.body }}
+</div>
+<!-- END BLOG POST -->
+
+</div>
+<!-- END MAIN BODY -->
+
+<!-- SIDEBAR -->
+<aside class="col-md-4">
+  <div class="p-3 mb-3 bg-light rounded">
+    <h4>About</h4>
+    <p class="mb-0">Vestibulum justo
+      nunc, placerat sit amet varius vitae, aliquet sed augue.
+      Cras ac magna ac ligula scelerisque aliquet id sed
+      sem.
+    </p>
+  </div>
+
+  <div class="p-3">
+    <h4>Follow Me</h4>
+    <ol class="list-unstyled">
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">YouTube</a></li>
+      <li><a href="#">Patreon</a></li>
+    </ol>
+  </div>
+</aside>
+<!-- END SIDEBAR -->
+{% endblock %}

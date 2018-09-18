@@ -1,0 +1,16 @@
+{% macro render_blog_post(post, from_index=false) %}
+  <div class="blog-post">
+    <a class="blog-post-title" href="{{ post|url }}"><h1 class="blog-post-title">{{ post.title }}</h1></a>
+  <p class="blog-post-info text-muted small">
+    written by
+    {% if post.twitter_handle %}
+      <a href="https://twitter.com/{{ post.twitter_handle
+        }}">{{ post.author or post.twitter_handle }}</a>
+    {% else %}
+      {{ post.author }}
+    {% endif %}
+    on {{ post.pub_date }}
+  </p>
+  {{ post.body }}
+  </div>
+{% endmacro %}

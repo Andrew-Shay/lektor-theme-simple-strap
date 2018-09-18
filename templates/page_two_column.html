@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+<!-- BLOG POST -->
+<div>
+  <h1>{{ this.title }}</h1>
+  {{ this.body }}
+</div>
+<!-- END BLOG POST -->
+
+</div>
+<!-- END MAIN BODY -->
+
+<!-- SIDEBAR -->
+<aside class="col-md-4">
+  {{ this.right }}
+</aside>
+<!-- END SIDEBAR -->
+{% endblock %}
