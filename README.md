@@ -6,7 +6,7 @@ It's a clean, simple, black and white theme.
 It's built using [Bootstrap 4](https://getbootstrap.com/).  
 The base theme is a modified version of [Lux](https://bootswatch.com/lux/) by [Bootswatch](https://bootswatch.com/).  
 Lux was modified with [bootstrap.build](https://bootstrap.build/).  
-See `_variables.scss` for the CSS source.
+See `css_src/` for the CSS source.
 
 ## Templates
 
